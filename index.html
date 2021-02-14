@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <title>demo</title>
+</head>
+
+<body>
+    <section class="loader">
+        <div class="loaderone"></div>
+        <div class="loadertwo"></div>
+        <div class="loaderthree"></div>
+    </section>
+    <section id="one">
+        <div class="left">
+            <i class="fas fa-home"></i>
+        </div>
+        <div class="right">
+            <div class="text">
+                <h1><span>1<br> </span> Home</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam dolorem atque quas aspernatur praesentium reprehenderit labore veritatis consequatur doloribus amet! Maxime doloribus debitis praesentium sequi, ut fuga rem! Beatae, pariatur.</p>
+                <a id="home" href="#">About us</a>
+            </div>
+        </div>
+    </section>
+    <section id="two">
+        <div class="left">
+            <i class="fas fa-address-card"></i>
+        </div>
+        <div class="right">
+            <div class="text">
+                <h1><span>2<br> </span>About us </h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam dolorem atque quas aspernatur praesentium reprehenderit labore veritatis consequatur doloribus amet! Maxime doloribus debitis praesentium sequi, ut fuga rem! Beatae, pariatur.</p>
+                <a id="about" href="#">Contact us</a>
+                <a id="backhome" href="#">
+                    <i class="fas fa-angle-double-left"></i> Home</a>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section id="three">
+        <div class="left">
+            <i class="fas fa-address-card"></i>
+        </div>
+        <div class="right">
+            <div class="text">
+                <h1><span>3 <br></span> Contact us </h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam dolorem atque quas aspernatur praesentium reprehenderit labore veritatis consequatur doloribus amet! Maxime doloribus debitis praesentium sequi, ut fuga rem! Beatae, pariatur.</p>
+                <a id="contact" href="#">
+                    <i class="fas fa-angle-double-left"></i> Home</a>
+                <a id="aboutback" href="#">
+                    <i class="fas fa-angle-double-left"></i> About us</a>
+            </div>
+        </div>
+    </section>
+</body>
+
+<script>
+    let home = document.querySelector("#home");
+    let about = document.querySelector("#about");
+    let contact = document.querySelector("#contact");
+    let one = document.querySelector("#one");
+    let two = document.querySelector("#two");
+    let three = document.querySelector("#three");
+    let backhome = document.querySelector("#backhome");
+    let aboutback = document.querySelector("#aboutback");
+
+
+    home.addEventListener('click', function() {
+        two.classList.toggle("twoOpen");
+
+    })
+    backhome.addEventListener('click', function() {
+        two.classList.toggle("twoOpen");
+
+    })
+    about.addEventListener('click', function() {
+        three.classList.toggle("threeOpen")
+    })
+    contact.addEventListener('click', function() {
+        three.classList.toggle("threeOpen")
+        two.classList.toggle("twoOpen");
+    })
+    aboutback.addEventListener('click', function() {
+        three.classList.toggle("threeOpen")
+    })
+</script>
+
+</html>
